@@ -73,10 +73,25 @@ const getNewToken = (oAuth2Client, callback) => {
  */
 const getResults = (spreadsheetId, range, callback) => (auth) => {
   const sheets = google.sheets({ version: 'v4', auth });
-  sheets.spreadsheets.values.get({ spreadsheetId, range }, (err, res) => {
-    if (err) return console.log('The API returned an error: ' + err);
-    callback(res.data.values);
-  });
+  sheets.spreadsheets.get(
+    {
+      spreadsheetId,
+      ranges: [],
+      fields:
+        'sheets/properties,sheets/data/rowData/values/formattedValue,sheets/data,sheets/data/rowData/values/hyperlink',
+    },
+    (err, res) => {
+      if (err) return console.log('The API returned an error: ' + err);
+      callback(res.data.sheets);
+    }
+  );
+  // sheets.spreadsheets.values.get(
+  //   { spreadsheetId, range, valueRenderOption: 'FORMULA' },
+  //   (err, res) => {
+  //     if (err) return console.log('The API returned an error: ' + err);
+  //     callback(res);
+  //   }
+  // );
 };
 
 const readSheet = (sheetId, range, callback) => {
