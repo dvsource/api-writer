@@ -1,0 +1,15 @@
+{
+  "name": "api-writer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dvsource/api-writer.git",
+  "author": "Viraj Kaushalye <virajk@codegen.net>",
+  "license": "MIT",
+  "scripts": {
+    "play": "node app.js"
+  },
+  "dependencies": {
+    "googleapis": "39",
+    "lodash": "^4.17.21"
+  }
+}

@@ -18,3 +18,22 @@
 - [ ] Generate API service & adapter interfaces
 - [ ] Edit Java file
 - [ ] Generate/Write REST controller
+
+## Playground
+
+### Dependancies
+
+- googleapis [source](https://github.com/googleapis/google-api-nodejs-client)
+- lodash [source](https://github.com/lodash/lodash)
+
+#### Install
+
+```shell
+yarn
+```
+
+#### Run
+
+```shell
+yarn play
+```
