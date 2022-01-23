@@ -81,7 +81,7 @@ const getResults = (spreadsheetId, range, callback) => (auth) => {
 
 const readSheet = (sheetId, range, callback) => {
   // Load client secrets from a local file.
-  fs.readFile('../../credentials.json', (err, content) => {
+  fs.readFile('credentials.json', (err, content) => {
     if (err) return console.log('Error loading client secret file:', err);
     // Authorize a client with credentials, then call the Google Sheets API.
     authorize(JSON.parse(content), getResults(sheetId, range, callback));

@@ -9,6 +9,7 @@
     "play": "node ./src/app.js"
   },
   "dependencies": {
+    "dotenv": "^14.2.0",
     "googleapis": "39",
     "lodash": "^4.17.21"
   }
