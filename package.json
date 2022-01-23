@@ -6,7 +6,7 @@
   "author": "Viraj Kaushalye <virajk@codegen.net>",
   "license": "MIT",
   "scripts": {
-    "play": "node app.js"
+    "play": "node ./src/app.js"
   },
   "dependencies": {
     "googleapis": "39",
